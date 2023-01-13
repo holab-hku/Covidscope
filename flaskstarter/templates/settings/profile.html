@@ -1,0 +1,15 @@
+{% from "macros/_form.html" import render_form %}
+
+{% set page_title = 'Update Profile' %}
+
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+<div class="log-in">
+  <div class="log-container flex-column">
+    <h3>Profile</h3>
+    {{ render_form(url_for('settings.profile'), form)}}
+  </div>
+</div>
+{% include 'layouts/footer.html' %}
+{% endblock %}
